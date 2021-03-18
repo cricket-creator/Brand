@@ -1,0 +1,53 @@
+.offers
+    &__grid
+        padding: 65px 0 96px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 30px
+        grid-template-areas: "women men kids" "accesories accesories accesories"
+    &-item
+        position: relative
+        $root: &
+        &:hover
+            #{$root}
+                &__wrap::after
+                    display: flex
+                &__img
+                    transform: scale(1.05)
+                    transition: transform 300ms
+        &_area-women
+            grid-area: women
+        &_area-men
+            grid-area: men
+        &_area-kids
+            grid-area: kids
+        &_area-accesories
+            grid-area: accesories
+        &__wrap
+            position: relative
+            overflow: hidden
+            &::after
+                position: absolute
+                top: 0
+                bottom: 0
+                width: 100%
+                content: ""
+                background-color: rgba(33, 22, 22, .7)
+                display: none
+        &__img
+            width: 360px
+        &__title
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            text-align: center
+            font-size: 16px
+            line-height: 19px
+            z-index: 1
+        &__subtitle
+            display: block
+            font-size: 24px
+            line-height: 29px
+    &-accesories
+        width: 100%

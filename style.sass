@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap')
+
+*
+    box-sizing: border-box
+
+body
+    font-family: "Lato", sans-serif
+    margin: 0
+    padding: 0
+
+img
+    display: block
+
+a
+    color: #fff
+    text-decoration: none
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+
+.title
+    margin: 0
+    font-weight: normal
+    color: #222
+    &_fw-bold
+        font-weight: 700
+    &_fw-black
+        font-weight: 900
+    &_clr-white
+        color: #fbfbfb
+    &_clr-pink
+        color: #f16d7f
+.text
+    margin: 0
+    font-weight: normal
+    font-size: 14px
+    line-height: 1
+
+@import ./src/_header.sass
+@import ./src/_preview.sass
+@import ./src/_offer.sass
+@import ./src/_products.sass
