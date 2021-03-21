@@ -150,6 +150,21 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 1024px) {
+  .header__wrap {
+    padding: 18px 16px 19px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header-btns__btn:not(:first-child) {
+    display: none;
+  }
+  .header-btns__btn:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
 .preview {
   background-color: #f1e4e6;
 }
@@ -163,8 +178,11 @@ a {
 }
 
 .preview-img {
-  width: 800px;
-  height: 764px;
+  width: 100%;
+}
+
+.preview-img__wrap {
+  width: 801px;
 }
 
 .preview__heading {
@@ -185,24 +203,72 @@ a {
   margin-right: 16px;
 }
 
-.preview-title {
-  width: 377px;
+.preview__title {
   font-size: 48px;
   line-height: 58px;
 }
 
-.preview-subtitle {
+.preview__subtitle {
   display: block;
   font-size: 32px;
   line-height: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .preview__wrap {
+    max-width: 770px;
+  }
+  .preview-img__wrap {
+    width: 386px;
+  }
+  .preview__heading {
+    margin-left: 40px;
+    padding: 0;
+  }
+  .preview__title {
+    font-size: 44px;
+    line-height: 53px;
+  }
+  .preview__subtitle {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .preview__wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .preview-img__wrap {
+    display: none;
+  }
+  .preview__heading {
+    margin: 148px 0;
+  }
+  .preview__title {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .preview__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.offers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .offers__grid {
   padding: 65px 0 96px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (minmax(0, 360px))[3];
+      grid-template-columns: repeat(3, minmax(0, 360px));
   grid-gap: 30px;
       grid-template-areas: "women men kids" "accesories accesories accesories";
 }
@@ -267,7 +333,7 @@ a {
 }
 
 .offers-item__img {
-  width: 360px;
+  width: 100%;
 }
 
 .offers-item__title {
@@ -288,8 +354,35 @@ a {
   line-height: 29px;
 }
 
-.offers-accesories {
-  width: 100%;
+@media screen and (max-width: 1024px) {
+  .offers__grid {
+    padding: 20px 0 154px;
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .offers {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .offers__grid {
+    padding: 64px 0;
+        grid-template-areas: "women" "men" "kids" "accesories";
+    -ms-grid-columns: minmax(0, 343px);
+        grid-template-columns: minmax(0, 343px);
+    grid-gap: 32px;
+  }
+  .offers-accesories {
+    height: 111px;
+  }
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .products-heading {
@@ -311,8 +404,8 @@ a {
   padding: 47px 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (minmax(0, 360px))[3];
+      grid-template-columns: repeat(3, minmax(0, 360px));
   grid-gap: 30px;
 }
 
@@ -361,7 +454,7 @@ a {
 }
 
 .products-item__img {
-  width: 360px;
+  width: 100%;
 }
 
 .products-item__add-btn {
@@ -446,6 +539,37 @@ a {
   transition: background-color 300ms;
 }
 
+@media screen and (max-width: 1024px) {
+  .products__grid {
+    padding: 72px 0 33px;
+    -ms-grid-columns: (minmax(0, 360px))[2];
+        grid-template-columns: repeat(2, minmax(0, 360px));
+    grid-gap: 16px;
+  }
+  .products__browse-all {
+    margin-bottom: 65px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .products {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .products__grid {
+    padding: 65px 0 40px;
+    -ms-grid-columns: minmax(0, 360px);
+        grid-template-columns: minmax(0, 360px);
+  }
+  .products__browse-all {
+    margin-bottom: 96px;
+  }
+}
+
 .feature {
   background-color: #222;
 }
@@ -496,6 +620,30 @@ a {
   padding: 0 22px;
 }
 
+@media screen and (max-width: 1024px) {
+  .feature__wrap {
+    padding: 48px 0 64px;
+  }
+  .feature-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .feature-list__item:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .feature__wrap {
+    padding: 48px 0 81px;
+  }
+  .feature__item:not(:last-child) {
+    margin-bottom: 46px;
+  }
+}
+
 .subscribe {
   background-image: url(./img/subscribe/bg.jpg);
   background-size: cover;
@@ -544,7 +692,6 @@ a {
 }
 
 .subscribe-form {
-  width: 560px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,6 +704,7 @@ a {
           justify-content: flex-end;
   text-align: center;
   margin-bottom: 3px;
+  margin-right: 103px;
 }
 
 .subscribe-form__title {
@@ -605,6 +753,35 @@ a {
   background-color: #e05c6e;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
+}
+
+@media screen and (max-width: 1024px) {
+  .subscribe__wrap {
+    padding: 54px 0 140px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .subscribe-form {
+    padding-top: 48px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .subscribe__wrap {
+    padding: 64px 0 110px;
+  }
+  .subscribe-form {
+    padding-top: 59px;
+  }
 }
 
 .copy {
@@ -667,5 +844,36 @@ a {
   color: #fff;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
+}
+
+@media screen and (max-width: 1024px) {
+  .copy__wrap {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .copy__wrap {
+    padding: 42px 0 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .copy-text {
+    padding: 40px 6px 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 740px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    max-width: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

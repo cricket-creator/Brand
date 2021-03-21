@@ -22,3 +22,21 @@
         &__text
             line-height: 17px
             padding: 0 22px
+
+@media screen and ( max-width: 1024px )
+    .feature
+        &__wrap
+            padding: 48px 0 64px
+        &-list
+            flex-direction: column
+            &__item
+                &:not(:last-child)
+                    margin-bottom: 48px
+
+@media screen and ( max-width: 375px )
+    .feature
+        &__wrap
+            padding: 48px 0 81px
+        &__item
+            &:not(:last-child)
+                margin-bottom: 46px

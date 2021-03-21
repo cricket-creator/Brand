@@ -29,3 +29,16 @@
                 background-color: #f16d7f
                 color: #fff
                 transition: background-color 300ms
+
+@media screen and ( max-width: 1024px )
+    .copy
+        &__wrap
+            padding: 24px 16px
+
+@media screen and ( max-width: 375px )
+    .copy
+        &__wrap
+            padding: 42px 0 10px
+            flex-direction: column-reverse
+        &-text
+            padding: 40px 6px 0

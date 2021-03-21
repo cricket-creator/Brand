@@ -1,8 +1,9 @@
 .offers
+    display: flex
     &__grid
         padding: 65px 0 96px
         display: grid
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(3, minmax(0, 360px))
         grid-gap: 30px
         grid-template-areas: "women men kids" "accesories accesories accesories"
     &-item
@@ -35,7 +36,7 @@
                 background-color: rgba(33, 22, 22, .7)
                 display: none
         &__img
-            width: 360px
+            width: 100%
         &__title
             position: absolute
             top: 50%
@@ -49,5 +50,20 @@
             display: block
             font-size: 24px
             line-height: 29px
-    &-accesories
-        width: 100%
+
+@media screen and ( max-width: 1024px )
+    .offers
+        &__grid
+            padding: 20px 0 154px
+            grid-gap: 20px
+
+@media screen and ( max-width: 375px )
+    .offers
+        justify-content: center
+        &__grid
+            padding: 64px 0
+            grid-template-areas: "women" "men" "kids" "accesories"
+            grid-template-columns: minmax(0, 343px)
+            grid-gap: 32px
+        &-accesories
+            height: 111px
