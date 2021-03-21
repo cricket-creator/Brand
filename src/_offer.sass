@@ -57,7 +57,7 @@
             padding: 20px 0 154px
             grid-gap: 20px
 
-@media screen and ( max-width: 375px )
+@media screen and ( max-width: 481px )
     .offers
         justify-content: center
         &__grid
@@ -65,5 +65,9 @@
             grid-template-areas: "women" "men" "kids" "accesories"
             grid-template-columns: minmax(0, 343px)
             grid-gap: 32px
+        &-item
+            &__img
+                object-fit: cover
+                object-position: center
         &-accesories
             height: 111px
