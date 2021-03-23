@@ -1,0 +1,59 @@
+.header
+    background-color: #222
+    &__wrap
+        display: flex
+        justify-content: space-between
+        padding: 18px 0 19px
+    &-logo
+        display: flex
+        align-items: flex-end
+        &__item
+            &:first-child
+                margin-left: 1px
+            &:not(:last-child)
+                margin-right: 40px
+    &-icon
+        display: block
+        width: 44px
+        height: 38px
+    &-search
+
+    &-btns
+        display: flex
+        align-items: flex-end
+        &__btn
+            &:not(:last-child)
+                margin-right: 33px
+            &:last-child
+                margin-right: 10px
+    &-cart
+        position: relative
+        &__counter
+            position: absolute
+            top: -8px
+            right: -9px
+            background-color: #f16d7f
+            width: 19px
+            height: 19px
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 12px
+            line-height: 14px
+            font-weight: normal
+            color: #fff
+
+@media screen and ( max-width: 1024px )
+    .header
+        &__wrap
+            padding: 18px 16px 19px
+
+@media screen and ( max-width: 481px )
+    .header
+        &-btns
+            &__btn
+                &:not(:first-child)
+                    display: none
+                &:not(:last-child)
+                    margin-right: 0

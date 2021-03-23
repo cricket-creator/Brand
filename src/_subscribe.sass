@@ -1,0 +1,79 @@
+.subscribe
+    background-image: url(./img/subscribe/bg.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    &__wrap
+        padding: 97px 0 153px
+        display: flex
+        justify-content: space-between
+    &-info
+        width: 360px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        &__userpic
+            &-wrap
+                width: 96px
+                height: 96px
+                transform: translateX(-10px)
+        &__caption
+            margin-top: 30px
+            font-size: 20px
+            line-height: 24px
+            text-align: center
+    &-form
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        text-align: center
+        margin-bottom: 3px
+        margin-right: 103px
+        &__title
+            font-size: 24px
+            line-height: 34px
+        &__subtitle
+            display: block
+            font-size: 18px
+            line-height: 30px
+        &__block
+            display: flex
+            justify-content: center
+            padding-top: 26px
+            width: 356px
+            align-self: center
+        &__input
+            outline: none
+            background-color: #e1e1e1
+            border: none
+            padding: 17px 22px
+            border-radius: 20px 0 0 20px
+            width: 256px
+        &__sub-btn
+            outline: none
+            cursor: pointer
+            background-color: #f16d7f
+            border: none
+            width: 100px
+            border-radius: 0 23px 23px 0
+            &:hover
+                background-color: #e05c6e
+                transition: background-color 300ms
+
+@media screen and ( max-width: 1024px )
+    .subscribe
+        &__wrap
+            padding: 54px 0 140px
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+        &-form
+            padding-top: 48px
+            margin-right: 0
+
+@media screen and ( max-width: 375px )
+    .subscribe
+        &__wrap
+            padding: 64px 0 110px
+        &-form
+            padding-top: 59px
